@@ -122,11 +122,13 @@ For this documentation rollout, do not touch production data, secrets, DNS, or C
 <a id="craig-2026-10-28-14"></a>
 ## 14 — Record the scoped Shopping documentation approval
 
-- Date: 2026-10-28, 6:24pm Brisbane, amended at 7:06pm. Scope: Shopping documentation; cross-section reference here.
-- Decision: Craig approves the short AGENTS local-scripts note, the catalogue Run locally table, and corrected CLAUDE job descriptions with the catalogue link. These are Shopping procedures, with dry-run and counts before repair or backfill. Never print, log, or copy dotenv values.
+- Date: 2026-10-28. Scope: Shopping documentation; cross-section reference here. The earlier approval is partly superseded. The exact time of the later instruction is unresolved.
+- Current decision: PR 645 contains only `docs/supermarket-catalogue.md`, with the Run locally table. Craig dropped the AGENTS import-note and CLAUDE job-description edits from that PR. The Shopping coordinator owns review and merge.
+- After that merge, the original Shopping worker must discard its uncommitted documentation edits and must not open another documentation PR. This instruction assigns no action to another owner.
+- History: At 6:24pm Brisbane, amended at 7:06pm, Craig approved the short AGENTS local-scripts note, the catalogue Run locally table, and corrected CLAUDE job descriptions with the catalogue link. The earlier Shopping procedures required dry-run and counts before repair or backfill. Never print, log, or copy dotenv values.
 - History: The 6:24pm description called `cspecials` half-price. The 7:06pm correction says every Coles special. `cimport` is the full Coles catalogue. `wimport` is the full Woolworths catalogue, including recovery. No further `wspecials` meaning is established here.
-- The Hub record retains the scoped approval. This gives no product or production authority to this repository.
-- Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z, and the original user turns in `thr_wnkxny5pdr`. [Hub decision 14](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-14).
+- The separate CS-139 mandatory ledger-read, decision-capture, and coordinator-only-merge pointers in AGENTS and CLAUDE remain required. This entry grants no blanket production authority, workflow edit, or operational action here.
+- Sources: The original approval is recorded in [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z. The later direct User block in `thr_wnkxny5pdr` limits the scope to PR 645; Hub preserved it in `CS139-decision14-supersession-source.json`. [Hub decision 14](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-14).
 
 <a id="craig-2026-10-28-15"></a>
 ## 15 — Record the specific Shopping deployment timeout decision
