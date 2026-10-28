@@ -10,7 +10,7 @@ Read this ledger before work in `craig-saves/rwrds-data`.
 
 ## Record each new decision
 
-1. When the CraigSaves bot relays Craig's instruction, preference, or decision, add an immediate receipt to the owning task.
+1. When Craig, directly or through the CraigSaves bot, gives an instruction, preference, or decision, add an immediate receipt to the owning task.
 2. Add the dated decision, affected section, source task, and any superseded decision to this ledger in the same relevant PR flow. Cross-section rules belong in Hub; link them here.
 3. Preserve historical receipts. Mark a superseded instruction explicitly. State implementation results only when source evidence supports them.
 4. Keep the task receipt current while the PR is pending. The coordinator arranges independent review and final-head checks, then merges without a routine permission question (standing orders 1–4 and 17).
@@ -44,8 +44,8 @@ For this documentation rollout, do not touch production data, secrets, DNS, or C
 ## 04 — Use existing failure emails
 
 - Date: 2026-10-28. Scope: cross-section; applies here.
-- Decision: Craig does not use Slack. Do not add Slack alerts. GitHub failure emails are sufficient. This is not permission to send test messages to real users.
-- Sources: [CC-123](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CC-123), as recorded in CS-139. [Hub decision 04](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-04).
+- Decision: Craig does not use Slack. Remove existing Slack alert steps and secret references. Do not add Slack alerts. GitHub failure emails are sufficient. This is not permission to send test messages to real users.
+- Source: [CC-123](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CC-123), receipt `01M60NCFT2PY4BSPQEJR9CJYJX`, 2026-10-28T07:07:55.587Z. [Hub decision 04](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-04).
 
 <a id="craig-2026-10-28-05"></a>
 ## 05 — Collect user feedback with PostHog Surveys
@@ -61,23 +61,25 @@ For this documentation rollout, do not touch production data, secrets, DNS, or C
 - Date: 2026-10-28. Scope: Net worth; cross-section product reference here.
 - Decision: Move towards public pages without login. Make `/net-worth` a public, indexable landing page, with its own canonical URL and sign-up/sign-in actions. Keep the Hub sitemap entry. A person's own account and private data remain protected by login and authorization.
 - Propose further public pages or tools on CS-121, then build them through the Net worth work flow. This repository receives no Net worth implementation or Hub proxy/navigation assignment.
-- History: The current decision supersedes the earlier sitemap-exclusion and read-only recommendations. Source receipt `01M60NGXQVRYNW3H1EB9ZZF8HY`, 2026-10-28T07:10:20.923Z. That historical relay named Grok Bot; decision 11 changes the current contact.
+- History: The current decision supersedes the earlier sitemap-exclusion recommendation. Source receipt `01M60NGXQVRYNW3H1EB9ZZF8HY`, 2026-10-28T07:10:20.923Z. That historical relay named Grok Bot; decision 11 changes the current contact.
 - Source: [NW-4](https://craigsaves.getbb.app/plugins/tasks/tasks/task/NW-4). [Hub decision 06](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-06).
 
 <a id="craig-2026-10-28-07"></a>
 ## 07 — Complete the Places repair
 
 - Date: 2026-10-28. Scope: Places lane of CS-98; cross-section product reference here.
-- Decision: Find and fix the cause of the navigation bug and all three reported React 418 hydration errors. A diagnosis-only result is insufficient. Use a fresh approach, reproduce with production builds, and add a regression test that fails before the fix. Verify the errors stop before reporting repair acceptance.
-- History: The 06:25:35.433Z receipt `01M60JYZ6905XCJZDEJHAB4WVC` records initial PR 66 failure, failed correction round 1 in PR 67, and failed correction round 2 in PR 69. Retain this failed history and order 5 stop. The later 07:08:16.024Z Craig receipt `01M60ND3RRGJV7PJMM71M9VDCA` requests full repair. It does not prove a technical PASS or reset correction rounds. The separate PL-4 stop remains separate.
+- Decision: Find and fix the cause of the navigation bug and all three reported React 418 hydration errors. A diagnosis-only result is insufficient. Use a fresh approach, reproduce with production builds, and add a regression test that fails before the fix. Verify the errors stop in production before reporting repair acceptance.
+- History: The 2026-10-28T06:25:35.433Z receipt `01M60JYZ6905XCJZDEJHAB4WVC` records initial PR 66 failure, failed correction round 1 in PR 67, and failed correction round 2 in PR 69. Order 5 stopped that sequence. Preserve these failures and the historical stop.
+- Current authority: Craig's later receipt `01M60ND3RRGJV7PJMM71M9VDCA`, 2026-10-28T07:08:16.024Z, authorizes a fresh repair and supersedes that stop for the fresh approach. Technical acceptance remains pending. This receipt does not prove a technical PASS or erase the failed rounds.
+- Separate task: [PL-4](https://craigsaves.getbb.app/plugins/tasks/tasks/task/PL-4) belongs to Places. Craig's receipt `01M60RCSQHQASC38F436RS4KA2`, 2026-10-28T08:00:31.477Z, replaces its prior STOP/photo allowance. It authorizes the Places coordinator to implement, merge, and deploy the revised robots.txt policy without further sign-off. This creates no PL-4 work in this repository.
 - Source: [CS-98](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-98). [Hub decision 07](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-07).
 
 <a id="craig-2026-10-28-08"></a>
 ## 08 — Show full prices and group Shopping variants
 
 - Date: 2026-10-28. Scope: Shopping; cross-section product reference here.
-- Decision: Amazon cards show Full price (RRP) on the price ruler, as Coles cards do. Group flavour, colour, and scent variants into one card when product, retailer, size, and price match. Run a daily check for missed groups.
-- Sources: [ST-138](https://craigsaves.getbb.app/plugins/tasks/tasks/task/ST-138) and [ST-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/ST-139), as recorded in CS-139. [Hub decision 08](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-08).
+- Decision: Amazon cards show Full price (RRP) on the price ruler, as Coles cards do. Group flavour, colour, and scent variants into one card when product, retailer, size, and price match. The CraigSaves bot checks the pages daily and records missed groups on ST-139. This assigns no new automation to this worker.
+- Sources: [ST-138](https://craigsaves.getbb.app/plugins/tasks/tasks/task/ST-138) and [ST-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/ST-139), as recorded in CS-139. The Shopping coordinator confirms daily-check ownership in receipt `01M60QRPPHGR4T25CS5TC0PFFS`, 2026-10-28T07:49:33.009Z. [Hub decision 08](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-08).
 
 <a id="craig-2026-10-28-09"></a>
 ## 09 — Correct Card fees, credits, and page groups
@@ -100,3 +102,36 @@ For this documentation rollout, do not touch production data, secrets, DNS, or C
 - Decision: From this date, the CraigSaves bot replaces Grok Bot as Craig's single contact. It handles factory/coordinator communication. Reports remain on [CS-121](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-121), not retired chief threads. Do not message or notify retired chiefs.
 - History: This supersedes only Grok Bot's current-contact role, including that wording in standing order 18. Preserve historical relay names and [CS-135](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-135) receipts. CS-121 is an inbox, not a chief-thread registry.
 - Source: Current direct relay recorded in [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139). [Hub decision 11](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-11).
+
+<a id="craig-2026-10-28-12"></a>
+## 12 — Record the scoped Woolworths recovery decision
+
+- Date: 2026-10-28, 6:48pm Brisbane. Scope: Shopping recovery; cross-section reference here.
+- Decision: Craig authorizes the existing Shopping recovery owner to re-check 2,344 Woolworths items now with a one-off laptop script. Read and update prices only. First run a dry-run and report counts. Send no notifications, delete nothing, and never expose dotenv values. Report the final Buyable count against about 26,500 before the outage, plus remaining missing items and reasons.
+- This repository starts no script or data action. The Hub record retains the scoped recovery authority.
+- Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z, and the original user turns in Shopping recovery thread `thr_wnkxny5pdr`. [Hub decision 12](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-12).
+
+<a id="craig-2026-10-28-13"></a>
+## 13 — Complete approved documentation through normal review
+
+- Date: 2026-10-28, 7:06pm Brisbane. Scope: approved documentation PRs; applies here as relayed by Hub.
+- Decision: Proceed with approved AGENTS, CLAUDE, and documentation changes through pstack without another approval request. Complete normal review, tests, coordinator merge, and reporting. If legitimate edits or commits are blocked, repair the worker environment narrowly on the laptop. Use supported permission mechanisms and report the exact change.
+- History: This supersedes the 6:24pm request for another approval card for these already approved documents. Preserve failed attempts and any automatic approval denial. It does not permit disabled checks or unrestricted access. Do not touch secrets, dotenv values, Coolify, DNS, or production data.
+- Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z, and the original user turns in `thr_wnkxny5pdr`. Hub applies this authority to legitimate documentation preparation in this rollout. [Hub decision 13](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-13).
+
+<a id="craig-2026-10-28-14"></a>
+## 14 — Record the scoped Shopping documentation approval
+
+- Date: 2026-10-28, 6:24pm Brisbane, amended at 7:06pm. Scope: Shopping documentation; cross-section reference here.
+- Decision: Craig approves the short AGENTS local-scripts note, the catalogue Run locally table, and corrected CLAUDE job descriptions with the catalogue link. These are Shopping procedures, with dry-run and counts before repair or backfill. Never print, log, or copy dotenv values.
+- History: The 6:24pm description called `cspecials` half-price. The 7:06pm correction says every Coles special. `cimport` is the full Coles catalogue. `wimport` is the full Woolworths catalogue, including recovery. No further `wspecials` meaning is established here.
+- The Hub record retains the scoped approval. This gives no product or production authority to this repository.
+- Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z, and the original user turns in `thr_wnkxny5pdr`. [Hub decision 14](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-14).
+
+<a id="craig-2026-10-28-15"></a>
+## 15 — Record the specific Shopping deployment timeout decision
+
+- Date: 2026-10-28, 6:24pm Brisbane. Scope: one Shopping Coolify deployment timeout; cross-section reference here.
+- Decision: Ignore that one-off `api.github.com` timeout unless it recurs. Create no automatic retry job, API token, or support report. If it recurs, record it on CS-121 and flag the CraigSaves bot.
+- This is not a waiver for other deployment failures. This repository starts no deployment or Coolify action.
+- Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), receipt `01M60W7P2SRY5A5EMCNR9BK36E`, 2026-10-28T09:07:38.201Z, and the original user turns in `thr_wnkxny5pdr`. [Hub decision 15](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md#craig-2026-10-28-15).
