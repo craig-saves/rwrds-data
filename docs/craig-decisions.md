@@ -4,7 +4,7 @@ Read this ledger before work in `craig-saves/rwrds-data`.
 
 - Owner: Craig. Entries below are paraphrases of decisions dated 2026-10-28.
 - Source: [CS-139](https://craigsaves.getbb.app/plugins/tasks/tasks/task/CS-139), its original decision list, and its current bot/PostHog amendment recorded at 2026-10-28T07:27:49.906Z (receipt `01M60PGY4J9KFNGWV8R45KT9R1`).
-- [Hub canonical ledger](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md) owns cross-section rules. The links below use its planned stable IDs. Publication and live anchors remain unverified in this PR; the Hub coordinator must validate publication before merge.
+- [Hub canonical ledger on main](https://github.com/craig-saves/craigsaves/blob/main/docs/craig-decisions.md) owns cross-section rules. [Hub PR 61](https://github.com/craig-saves/craigsaves/pull/61) merged at 2026-10-28T14:37:53Z as `de15a87e3accb75f64132e71191ae484409870eb`. The [immutable published ledger](https://github.com/craig-saves/craigsaves/blob/de15a87e3accb75f64132e71191ae484409870eb/docs/craig-decisions.md) contains all 15 linked anchors. Verified size: 23,940 bytes. SHA256: `0a98a0f238d0b28531d4f74196f92ce5fff0fc18de5d44866abb8563954e4c0d`.
 - Current decisions are binding within their scope. Product decisions below are cross-section reference, not permission to start those products in this repository. This change records decisions only. It does not prove implementation, release, or production acceptance.
 - Task links use the route verified from installed BB source. Browser rendering was not verified.
 
